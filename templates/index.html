@@ -1,0 +1,14 @@
+ {%  extends 'base.html' %}
+ {%  block title %} Home| ML{% endblock %}
+ {%  block body %}
+ <h1>Enter your experience here.</h1>
+ <form  class="m-4" action="{{ url_for('result') }}" method="POST" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="exp" class="form-label">Experience</label>
+    <input type="number" class="form-control" id="exp" name="exp" aria-describedby="emailHelp">
+  </div>
+   
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+ 
+ {% endblock %}
